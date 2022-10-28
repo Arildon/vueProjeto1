@@ -1,26 +1,51 @@
+
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <HeaderSite :esta_logado="esta_logado"/>
+  <PrimeiroComponente />
+  <h4>Assunto: {{retorno}}</h4>
+  <LifeCycle />
+  <ExemploPessoa />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+  import HeaderSite from './components/HeaderSite.vue'
+  import PrimeiroComponente from './components/PrimeiroComponente.vue'
+  import LifeCycle from  './components/LifeCycle.vue'
+  import ExemploPessoa from './components/ExemploPessoa.vue'
 
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
+  export default {
+    name: 'App',
+    components: {
+    HeaderSite,
+    PrimeiroComponente,
+    LifeCycle,
+    ExemploPessoa,
+},
+    data() {
+      return {
+        esta_logado: true,
+        retorno : 'Aprendendo Vue'
+      }
+    }
   }
-}
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  body {
+    background-color: #fcfcfc;
+    color: #3c474b;
+    margin: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  a {
+    color: #c72727
+  }
+
+  h1 {
+    color: black;
+    font-family: Tahoma;
+    text-align: center;
+    text-decoration: underline;
+  }
 </style>

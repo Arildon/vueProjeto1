@@ -1,5 +1,10 @@
 # projeto1
 
+<!-- Mark Down -->
+## Descrição do Projeto
+
+Projeto iniciado com intuito de aprendizado do Vue 3
+
 ## Project setup
 ```
 npm install
